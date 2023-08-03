@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasswordProtector</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Toggle Password</h1>
+        <div class="row">
+            <input id="input-box"  type="password" placeholder="Type your password">
+            <img src="/invisible.png" onclick=showPass() id="eye-icon">
+        </div>
+    </div>
+    <script>
+        const inputBox=document.getElementById("input-box");
+const eyeIcon=document.getElementById("eye-icon");
+const border=document.querySelector(".row");
+function showPass(){
+    if(inputBox.type=="password"){
+        inputBox.type="text";
+        eyeIcon.src="show.png";
+        border.style.border="3.5px solid rgb(255, 0, 162)";
+    }
+    else{
+        inputBox.type="password";
+        eyeIcon.src="invisible.png";
+        border.style.border="none";
+    }
+}
+
+    </script>
+</body>
+</html>
