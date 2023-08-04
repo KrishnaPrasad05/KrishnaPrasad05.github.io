@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: rgb(30, 27, 27);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+h1{
+    color: black;
+    text-align: center;
+}
+.row{
+    display: flex;
+    border: 1px solid;
+    border-color: white;
+    padding: 5px;
+    border-radius: 2px;
+    min-width: 20%;
+    
+}
+input{
+    border: none;
+    outline: none;
+    flex: 1;
+    background-color: transparent;
+    font-size: 16px;
+    color: red;
+}
+
+p{
+    color: red;
+    position: absolute;
+    min-width: 20%;
+    top: 58%;
+    padding: 5px;
+    display: none;
+}

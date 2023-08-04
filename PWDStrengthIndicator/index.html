@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Indicator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Password Strength Indicator</h1>
+    <div class="container">
+        
+        <div class="row">
+            <input id="ip" type="password" placeholder="password">
+
+        </div>
+        <p id="para"></p>
+    </div>
+    <script>
+        var ip=document.getElementById("ip");
+        var btn=document.getElementById("btn");
+        const msg=document.getElementById("para");
+        const row=document.querySelector(".row");
+
+        ip.addEventListener("input",()=>{
+            if(ip.value.length>0){
+                msg.style.display="block";
+            if(ip.value.length<4){
+                msg.textContent="Your password is weak";
+                msg.style.color="red";
+                row.style.borderColor="red";
+                ip.style.color="red";
+            }
+            else if(ip.value.length>=4 && ip.value.length<8){
+                msg.textContent="Your password is medium";
+                msg.style.color="yellow";
+                row.style.borderColor="yellow";
+                ip.style.color="yellow";
+
+            }
+            else if(ip.value.length>=8 && ip.value.length<12){
+                msg.textContent="Your password is strong";
+                msg.style.color="green";
+                row.style.borderColor="green";
+                ip.style.color="green";
+            }
+        }
+            else{
+                msg.style.display="none";
+                msg.textContent="";
+                row.style.borderColor="white";
+            }
+        })
+    </script>
+</body>
+</html>
