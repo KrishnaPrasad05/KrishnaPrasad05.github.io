@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniClock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg">
+        <div class="row">
+            <div class="clock">
+                <div class="digi">
+                    <div class="arrange">
+                        <span id="hour" class="time">00</span>
+                        <span >Hours</span>
+                    </div>
+                    <span class="col">:</span>
+                    <div class="arrange">
+                        <span id="min" class="time">00</span>
+                        <span>Minutes</span>
+                    </div>
+                    <span class="col">:</span>
+                    <div class="arrange">
+                        <span id="sec" class="time">00</span>
+                        <span>Seconds</span>
+                    </div> 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        let hour=document.getElementById("hour");
+        let min=document.getElementById("min");
+        let sec=document.getElementById("sec");
+        setInterval(() => {
+            const time=new Date();
+        hour.innerHTML=(time.getHours()<10?"0":"")+time.getHours();
+        min.innerHTML=(time.getMinutes()<10?"0":"")+time.getMinutes();
+        sec.innerHTML=(time.getSeconds()<10?"0":"")+time.getSeconds();
+        }, 1000);
+        
+    </script>
+</body>
+</html>
