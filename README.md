@@ -15,3 +15,5 @@ project 06: https://krishnaprasad05.github.io/Web-projects/QRCodeGenerator
 project 07: https://krishnaprasad05.github.io/Web-projects/Text2Speech
 
 project 08: https://krishnaprasad05.github.io/Web-projects/PasswordGenerator
+
+project 09: https://krishnaprasad05.github.io/Web-projects/MiniCalendar
