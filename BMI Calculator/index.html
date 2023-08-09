@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg">
+        <div class="fg">
+            <div class="cal">
+                <h1>BMI Calculator</h1>
+                <div class="wght">
+                    <label for="">Weight (kg)</label>
+                    <input type="text" id="weight">
+                </div>
+                <div class="hgt">
+                    <label for="">Height (cm)</label>
+                    <input type="text" id="height">
+                </div>
+                <div class="ctrl">
+                    <button onclick="reset()">RESET</button>
+                    <button onclick="submit()">SUBMIT</button>
+                </div>
+                <h4>Your BMI is</h4>
+                <p id="res">00.00</p>
+                <h5>You are <span id="res1"></span></h5>
+                <div class="in">
+                    <div class="scale"><br><p style="font-size: 10px; text-align: center;">UNDERWEIGHT</p><p style="font-size: small; text-align: center; font-weight: 700;">< 18.5</p></div>
+                    <div class="scale"><br><p style="font-size: 10px; text-align: center;">NORMAL</p><p style="font-size: small; text-align: center; font-weight: 700;">18.5 - 25</p></div>
+                    <div class="scale"><br><p style="font-size: 10px; text-align: center;">OVERWEIGHT</p><p style="font-size: small; text-align: center; font-weight: 700;">25 - 30</p></div>
+                    <div class="scale"><br><p style="font-size: 10px; text-align: center;">OBESE</p><p style="font-size: small; text-align: center; font-weight: 700;">>= 30</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        
+        function submit(){
+            let w=document.getElementById("weight").value;
+            let h=document.getElementById("height").value;
+            let res=document.getElementById("res");
+            let res1=document.getElementById("res1");
+
+            let w1=parseFloat(w);
+            let h1=parseFloat(h);
+            let h2=h1/100;
+            let h3=h2*h2;
+            let a=w1/h3;
+            /* let b=a*10000; */
+            if(a<18.5){
+                res1.textContent="UNDERWEIGHT";
+                res.style.color="#eb9c12";
+                res.textContent=a.toFixed(2);
+            }
+            if(a>=18.5 && a<25){
+                res1.textContent="NORMAL";
+                res.style.color="#035d03";
+                res.textContent=a.toFixed(2);
+            }
+            if(a>=25 && a<30){
+                res1.textContent="OVERWEIGHT";
+                res.style.color="#eb5924";
+                res.textContent=a.toFixed(2);
+            }
+            if(a>=30){
+                res1.textContent="OBESE";
+                res.style.color="#be0505";
+                res.textContent=a.toFixed(2);
+            }
+        }
+        function reset(){
+            location.reload();
+        }
+    </script>
+</body>
+</html>
