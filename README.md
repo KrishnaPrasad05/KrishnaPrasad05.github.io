@@ -21,3 +21,5 @@ project 09: https://krishnaprasad05.github.io/Web-projects/MiniCalendar
 project 10: https://krishnaprasad05.github.io/Web-projects/MiniClock
 
 project 10: https://krishnaprasad05.github.io/Web-projects/MiniStopwatch
+
+project 10: https://krishnaprasad05.github.io/Web-projects/BMI Calculator
